@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html"; charset="UTF-8">
+    <title>js5</title>
+    <style>
+        .c1{
+            border:2px solid red;
+        }
+        .c2{
+            font-size:58px;
+        }
+    </style>
+</head>
+<body>
+    <div id="id1">12<a>12</a>3</div>
+    <input name="username" type="text" value="9999">
+    <input name="username" type="checkbox" value="9999">
+    <hr/>
+
+    <div class="c1">ddddd</div>
+    <div class="c1">eeee</div>
+
+    <input onclick="Foo();" type="button" value="hi"/>
+
+    <div style="height:3000px">aaa</div>
+
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/oldboy.js"></script>
+    <script type="text/javascript">
+        /*
+        var text = $('#id1').text();
+        var html = $('#id1').html();
+        console.log(text);
+        console.log(html);
+        $('#id1').text('alex');
+
+        var data = $("input[name='username']").val();
+        console.log(data);
+        $("input[name='username']").val('ab');
+
+        var data = $("input[name='username']").attr('name');
+        console.log(data);
+        $("input[name='username']").attr('name','ok')
+
+        //$("input[type='checkbox']").prop("checked",true);
+        $("input[type='checkbox']").prop("disabled", true);
+        */
+
+
+        function Foo(){
+            $('.c1').toggleClass('c2');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!--返回顶部实例-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html"; charset="UTF-8">
+    <title>js5</title>
+    <style>
+        .returnTop{
+            position:fixed;
+            width:50px;
+            height:60px;
+            right:20px;
+            bottom:20px;
+            background-color:red;
+            color:white;
+        }
+        .hide{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+<!--
+    <div id="return_top" class="returnTop hide" onclick="Go();">返回顶部</div>
+ -->
+    <div id="return_top" class="returnTop hide">????</div>
+
+    <div style="height:3000px">aaa</div>
+
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/oldboy.js"></script>
+    <script type="text/javascript">
+        //$等于jquery的对象
+        $(function(){
+            //当页面框架加载完成之后，默认执行该函数
+            $(#return_top).click(function{
+            $(window).scrollTop(0);
+            });
+
+
+        })
+        $(window).scroll(function() {
+            //console.log(123);
+            var height = $(window).scrollTop();
+            //console.log(height);
+            if(height>0){
+                //显示返回顶部
+                $('#return_top').removeClass('hide')
+            }else{
+                //隐藏返回顶部
+                $('#return_top').addClass('hide')
+            }
+        });
+        /*
+        function Go(){
+        $(window).scrollTop(0);
+        */
+        }
+
+    </script>
+
+</body>
+</html>
