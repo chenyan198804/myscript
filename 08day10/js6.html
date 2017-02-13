@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="content-type" content="text/html"; charset="UTF-8">
-    <title>js5</title>
+    <title>js6</title>
     <style>
         .returnTop{
             position:fixed;
@@ -24,7 +24,7 @@
 <!--
     <div id="return_top" class="returnTop hide" onclick="Go();">返回顶部</div>
  -->
-    <div id="return_top" class="returnTop hide">????</div>
+    <div id="return_top" class="returnTop hide">返回顶部</div>
 
     <div style="height:3000px">aaa</div>
 
@@ -34,8 +34,8 @@
         //$等于jquery的对象
         $(function(){
             //当页面框架加载完成之后，默认执行该函数
-            $(#return_top).click(function{
-            $(window).scrollTop(0);
+            $('#return_top').click(function(){
+                $(window).scrollTop(0);
             });
 
 
@@ -55,9 +55,8 @@
         /*
         function Go(){
         $(window).scrollTop(0);
-        */
         }
-
+        */
     </script>
 
 </body>
