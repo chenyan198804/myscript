@@ -1,0 +1,50 @@
+<!--
+链式执行
+$(function(){
+    $('#tip').focus(function(){****}).blur(function(){****})
+}
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .gray{
+            color:gray;
+        }
+        .black{
+            color:black;
+        }
+    </style>
+
+</head>
+<body>
+    <input type="text" class="gray" id="tip" value="请输入关键字" />
+    <script src="js/jquery-3.1.1.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('#tip').focus(function(){
+                //var id = $('#tip');
+                var id = $(this);
+                id.addClass('black');
+                if(id.val()=='请输入关键字'||id.val().trim()==''){
+                    id.val('');
+                }
+            });
+            $('#tip').blur(function(){
+                var id = $(this);
+                var val = id.val();
+                if(val.length==0||id.val().trim()==''){
+                    id.val('请输入关键字');
+                    id.attr('class','gray');
+                }else{
+                    id.attr('class','black');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
+

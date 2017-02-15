@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <title>Checklist</title>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        $('#selectAll').click(function(){
+            $('#checklist :checkbox').attr('checked',true);
+        });
+        $('#unselectAll').click(function(){
+            $('#checklist :checkbox').attr('checked',false);
+        });
+        $('#reverseAll').click(function(){
+            $('#checklist :checkbox').each(function(){
+                $(this).attr('checked',!$(this).attr('checked'));
+            });
+        });
+    })
+    </script>
+
+</head>
+<body>
+    <input type="button" value="Select" id="selectAll"/>
+    <input type="button" value="unSelect" id="unselectAll"/>
+    <input type="button" value="Reverse" id="reverseAll"/>
+
+    <div id="checklist">
+        <input type="checkbox" value="1" />basketball
+        <input type="checkbox" value="2" />football
+        <input type="checkbox" value="3" />tennis
+    </div>
+
+</body>
+</html>
