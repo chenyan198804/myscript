@@ -1,0 +1,33 @@
+{% load oldboy %}
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title></title>
+</head>
+<body>
+	<h1>{{user}}</h1>
+	
+	<table border='1'>
+		{% for item in data %}
+			<tr>
+				<td>{{item.id}}</td>
+				<td>{% mymethod item.id%}</td>
+				<td>{{item.hostname}}</td>
+				<td>{{item.create_data|date:"Y-m-d H:i:s"}}</td>
+				<td>{{item.update_data|date:"Y-m-d H:i:s"}}</td>
+			</tr>
+		{% endfor %}
+	</table>	
+		{% if not user %}
+			<h2>?</h2>
+		{% else %}
+			<h2>?</h2>
+		{% endif %}		
+				
+		{% ifequal user 'alex' %}
+			<h2>?alex</h2>
+		{% else %}
+			<h2>?alex</h2>
+		{% endifequal %}	
+</body>
+</html>

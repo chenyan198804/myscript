@@ -1,0 +1,20 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title></title>
+</head>
+<body>
+	<form action='/web/register/' method='POST'>
+	<!-- 
+		用户名:{{form.username}}
+		<br/>
+		邮箱:{{form.email}}
+		<br/>
+	 -->
+	 	{{form.as_table}}
+
+		<input type='submit' value='提交' /><span style='color:red;'>{{status}}</span>
+		<img src='/static/bd_logo1_31bdc765.png' />
+	</form>
+</body>
+</html>
