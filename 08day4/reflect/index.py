@@ -37,7 +37,7 @@ else:
 finally:
     print('无论如何都执行')
 
-    
+'''    
 class MyException(Exception):
     def __init__(self,msg):
         self.error = msg
@@ -49,4 +49,4 @@ obj = MyException('错误')
 print(obj)
 #主动触发错误
 raise MyException('自定义错误')
-    
+'''

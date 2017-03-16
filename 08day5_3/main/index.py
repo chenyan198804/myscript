@@ -4,8 +4,8 @@
 import socket
 
 def handle_request(client):
-    buf = client.recv(1024)
-    client.send('HTTP/1.1 200 OK\r\n\r\n')
+    client.recv(1024)
+    client.send("HTTP/1.1 200 OK\r\n\r\n")
     client.send("Hello,Candy")
     
 def main():
