@@ -1,0 +1,30 @@
+{% extends "master/layout.html" %}
+{% load oldboy %}
+
+{% block content %}
+	<form action='/web/login/' method='POST'>
+		Hostname:<input name='hostname' />
+		</br>
+		IP: <input name='ip' />
+		</br>
+		<label>GrounpSelection:</label>
+			<select>
+			 	<optgroup label="group">
+			 		<option value="A">A</option>
+	              	<option value="B">B</option>
+	            </optgroup>
+			</select>
+		<input type='submit' value='添加' />
+
+	<table border='1'>
+		{% for item in data %}
+			<tr>
+				<td>{{item.hostname}}</td>
+				<td>{{item.ip}}</td>
+				<td>{{item.grounpinfo}}</td>
+			</tr>
+		{% endfor %}
+	</table>	
+
+
+{% endblock %}
